@@ -1,89 +1,139 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Şirket Adı | Kurumsal Web Sitesi</title>
+    <!-- Google Fonts: Playfair Display (Serif Başlıklar için) & Plus Jakarta Sans (Gövde metni için) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        rosebrand: {
+                            50: '#fff5f5',
+                            100: '#ffe8e8',
+                            200: '#fcd2d2',
+                            300: '#f7b0b0',
+                            400: '#f08181',
+                            DEFAULT: '#b86262', // Roselotte Gül Kurusu tonu
+                            600: '#9e4d4d',
+                            700: '#853e3e',
+                        },
+                        pearl: '#fcfbfa', // Yumuşak inci beyazı arka plan
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-pearl text-stone-800 font-sans tracking-wide antialiased">
 
     <!-- Navbar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-blue-600">ŞİRKET LOGO</a>
-            <div class="space-x-6">
-                <a href="#hizmetler" class="hover:text-blue-600 transition">Hizmetler</a>
-                <a href="#hakkimizda" class="hover:text-blue-600 transition">Hakkımızda</a>
-                <a href="#iletisim" class="hover:text-blue-600 transition">İletişim</a>
+    <nav class="bg-pearl/80 backdrop-blur-md border-b border-stone-100 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="font-serif text-xl tracking-widest font-semibold text-rosebrand hover:opacity-80 transition">ROSELOTTE</a>
+            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-stone-500">
+                <a href="#hizmetler" class="hover:text-rosebrand transition duration-300">Hizmetler</a>
+                <a href="#hakkimizda" class="hover:text-rosebrand transition duration-300">Hakkımızda</a>
+                <a href="#iletisim" class="hover:text-rosebrand transition duration-300">İletişim</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-gradient-to-r py-24 text-center px-4">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">Geleceğin Teknolojik Çözümleri</h1>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Şirketimiz, iş süreçlerinizi dijitalleştirmek ve verimliliğinizi artırmak için yenilikçi yazılım ve danışmanlık hizmetleri sunar.</p>
-            <a href="#iletisim" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-lg">Bizimle Çalışın</a>
+    <header class="py-28 md:py-36 text-center px-6 relative overflow-hidden bg-gradient-to-b from-rosebrand-50/50 to-transparent">
+        <!-- Dekoratif Arka Plan Çizgisi -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-64 bg-rosebrand-100 -z-10"></div>
+        
+        <div class="max-w-3xl mx-auto">
+            <span class="text-xs uppercase tracking-[0.3em] font-medium text-rosebrand mb-4 block">Zarafet & Teknoloji</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-normal text-stone-900 mb-8 leading-tight italic">
+                Geleceğin Teknolojik <span class="font-semibold not-italic text-rosebrand">Çözümleri</span>
+            </h1>
+            <p class="text-stone-500 font-light leading-relaxed max-w-xl mx-auto mb-10 text-sm md:text-base">
+                Şirketimiz, iş süreçlerinizi dijitalleştirmek ve estetik vizyonunuzu teknik mükemmellikle buluşturmak için yenilikçi yazılım çözümleri sunar.
+            </p>
+            <div class="inline-block relative group">
+                <a href="#iletisim" class="block border border-rosebrand text-rosebrand px-8 py-3 text-xs uppercase tracking-widest font-medium rounded-sm bg-transparent hover:bg-rosebrand hover:text-white transition-all duration-500">
+                    Bizimle Çalışın
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hizmetler -->
-    <section id="hizmetler" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Hizmetlerimiz</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+    <section id="hizmetler" class="py-24 border-t border-stone-100 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-2xl md:text-3xl text-stone-900 font-semibold mb-3">Neler Yapıyoruz?</h2>
+                <div class="w-12 h-px bg-rosebrand/40 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
                 <!-- Kart 1 -->
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600 font-bold text-xl">01</div>
-                    <h3 class="text-xl font-semibold mb-2">Özel Yazılım Geliştirme</h3>
-                    <p class="text-gray-600 text-sm">İhtiyaçlarınıza özel, ölçeklenebilir ve güvenli web/mobil uygulamalar geliştiriyoruz.</p>
+                <div class="group text-center">
+                    <div class="font-serif text-3xl italic text-rosebrand/30 group-hover:text-rosebrand/70 transition duration-500 mb-4">i.</div>
+                    <h3 class="font-serif text-lg font-medium text-stone-900 mb-3">Özel Yazılım Geliştirme</h3>
+                    <p class="text-stone-500 font-light text-xs leading-relaxed">İhtiyaçlarınıza özel, ölçeklenebilir, modern ve güvenli web mimarileri kurguluyoruz.</p>
                 </div>
                 <!-- Kart 2 -->
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600 font-bold text-xl">02</div>
-                    <h3 class="text-xl font-semibold mb-2">Bulut Dönüşümü</h3>
-                    <p class="text-gray-600 text-sm">Altyapınızı bulut teknolojilerine taşıyarak maliyetlerinizi azaltıyor, hızınızı artırıyoruz.</p>
+                <div class="group text-center">
+                    <div class="font-serif text-3xl italic text-rosebrand/30 group-hover:text-rosebrand/70 transition duration-500 mb-4">ii.</div>
+                    <h3 class="font-serif text-lg font-medium text-stone-900 mb-3">Bulut Dönüşümü</h3>
+                    <p class="text-stone-500 font-light text-xs leading-relaxed">Altyapınızı bulut teknolojilerine taşıyarak maliyetlerinizi azaltıyor, hızınızı artırıyoruz.</p>
                 </div>
                 <!-- Kart 3 -->
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600 font-bold text-xl">03</div>
-                    <h3 class="text-xl font-semibold mb-2">IT Danışmanlığı</h3>
-                    <p class="text-gray-600 text-sm">Doğru teknoloji yatırımları yapmanız için mimari ve süreç danışmanlığı sağlıyoruz.</p>
+                <div class="group text-center">
+                    <div class="font-serif text-3xl italic text-rosebrand/30 group-hover:text-rosebrand/70 transition duration-500 mb-4">iii.</div>
+                    <h3 class="font-serif text-lg font-medium text-stone-900 mb-3">IT Danışmanlığı</h3>
+                    <p class="text-stone-500 font-light text-xs leading-relaxed">Doğru teknoloji yatırımları yapmanız için mimari süreç ve optimizasyon danışmanlığı sağlıyoruz.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Hakkımızda -->
-    <section id="hakkimizda" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">Hakkımızda</h2>
-            <p class="text-gray-600 leading-relaxed mb-6">
-                Yazılım dünyasındaki yenilikleri yakından takip eden uzman ekibimizle, müşterilerimize sürdürülebilir ve yüksek performanslı dijital çözümler üretiyoruz. Güvenilirlik ve şeffaflık en büyük ilkemizdir.
+    <section id="hakkimizda" class="py-24 bg-rosebrand-50/30 border-t border-b border-stone-100">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <span class="text-xs uppercase tracking-[0.2em] font-medium text-stone-400 mb-4 block">Hikayemiz</span>
+            <h2 class="font-serif text-2xl md:text-3xl text-stone-900 font-semibold mb-6">Mükemmelliğe Adanmışlık</h2>
+            <p class="text-stone-600 font-light leading-loose text-sm md:text-base italic">
+                "Yazılım dünyasındaki en güncel mimarileri yakından takip eden uzman kadromuzla, iş ortaklarımıza sürdürülebilir, yüksek performanslı ve estetik dijital çözümler üretiyoruz. Güvenilirlik ve şeffaflık en büyük temel taşımızdır."
             </p>
         </div>
     </section>
 
     <!-- İletişim -->
-    <section id="iletisim" class="py-20 bg-white">
-        <div class="max-w-xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4 text-gray-900">İletişime Geçin</h2>
-            <p class="text-gray-600 mb-8">Projeleriniz veya sorularınız için bize e-posta yoluyla ulaşabilirsiniz.</p>
-            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                <p class="font-medium text-gray-700">E-posta:</p>
-                <a href="mailto:info@sirketiniz.com" class="text-blue-600 font-semibold text-lg hover:underline block mb-4">info@sirketiniz.com</a>
-                <p class="font-medium text-gray-700">Adres:</p>
-                <p class="text-gray-600 text-sm">Levent, Büyükdere Cd. No:123, Şişli/İstanbul</p>
+    <section id="iletisim" class="py-24 bg-white">
+        <div class="max-w-xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-2xl md:text-3xl text-stone-900 font-semibold mb-4">İletişime Geçin</h2>
+            <div class="w-12 h-px bg-rosebrand/40 mx-auto mb-6"></div>
+            <p class="text-stone-500 font-light text-sm mb-10">Projeleriniz veya danışmanlık talepleriniz için bize ulaşabilirsiniz.</p>
+            
+            <div class="border border-stone-100 bg-pearl p-8 rounded-sm">
+                <span class="text-xs uppercase tracking-widest font-medium text-stone-400 block mb-2">E-posta Adresi</span>
+                <a href="mailto:info@sirketiniz.com" class="font-serif text-lg text-rosebrand hover:text-rosebrand-600 transition block mb-6">info@sirketiniz.com</a>
+                
+                <span class="text-xs uppercase tracking-widest font-medium text-stone-400 block mb-2">Ofis</span>
+                <p class="text-stone-600 font-light text-xs leading-relaxed">Levent, Büyükdere Cd. No:123,<br>Şişli / İstanbul</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
-        <p>&copy; 2026 Şirket Adı. Tüm hakları saklıdır.</p>
+    <footer class="bg-pearl text-stone-400 py-10 text-center text-xs tracking-widest border-t border-stone-100 uppercase">
+        <p>&copy; 2026 Roselotte. Tüm hakları saklıdır.</p>
     </footer>
 
 </body>

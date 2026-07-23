@@ -1,0 +1,222 @@
+/* ==========================================
+   CERTIFICATES PAGE SPECIFIC STYLES
+   ========================================== */
+
+.nav-links a.active {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Page Header */
+.page-header {
+  padding: 6rem 8% 3rem;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.12) 0%, transparent 60%);
+  text-align: center;
+}
+
+.page-header-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Certificates Grid Section */
+.cert-section {
+  padding: 4rem 8% 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.cert-card {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-glow);
+  background: var(--bg-surface-hover);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.highlight-card {
+  border-color: var(--border-glow);
+  background: linear-gradient(180deg, rgba(0, 242, 254, 0.05) 0%, var(--bg-surface) 100%);
+}
+
+.cert-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: var(--primary-gradient);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.cert-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 242, 254, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.cert-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+}
+
+.cert-info .issuer {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cert-info .cert-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.cert-actions {
+  display: flex;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  flex: 1;
+  text-align: center;
+}
+
+/* Traceability Section */
+.traceability-section {
+  padding: 5rem 8%;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+}
+
+.traceability-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.traceability-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.traceability-content p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.trace-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trace-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.trace-list strong {
+  color: var(--text-main);
+}
+
+.check-icon {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Batch Lookup Box */
+.audit-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+}
+
+.audit-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.audit-box p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.batch-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.batch-form input {
+  padding: 0.9rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  outline: none;
+}
+
+.batch-form input:focus {
+  border-color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .traceability-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

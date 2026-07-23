@@ -1,17 +1,20 @@
-/* 1. Global Variables & Dark Cyber-Industrial Theme */
+/* 1. Global Variables & Dark Navy-Industrial Theme */
 :root {
-  --bg-main: #0a0e17;
-  --bg-surface: #111827;
-  --bg-surface-hover: #1f293d;
+  --bg-main: #060a12;
+  --bg-surface: #0f172a;
+  --bg-surface-hover: #1e293b;
   
-  --primary: #00f2fe;
-  --primary-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-  --accent-glow: rgba(0, 242, 254, 0.25);
+  /* Navy & Sapphire Accents */
+  --primary: #2563eb;
+  --primary-light: #60a5fa;
+  --primary-gradient: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+  --navy-accent: #002b49;
+  --accent-glow: rgba(37, 99, 235, 0.3);
   
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --border-color: rgba(255, 255, 255, 0.08);
-  --border-glow: rgba(0, 242, 254, 0.3);
+  --border-glow: rgba(59, 130, 246, 0.35);
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -42,7 +45,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 8%;
-  background: rgba(10, 14, 23, 0.75);
+  background: rgba(6, 10, 18, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
@@ -85,7 +88,7 @@ body {
 
 .nav-links .nav-btn {
   background: var(--primary-gradient);
-  color: #000;
+  color: #ffffff;
   font-weight: 700;
   padding: 0.65rem 1.4rem;
   border-radius: var(--radius-sm);
@@ -95,8 +98,8 @@ body {
 
 .nav-links .nav-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.45);
-  color: #000;
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.55);
+  color: #ffffff;
 }
 
 /* 3. Hero Section */
@@ -106,8 +109,8 @@ body {
   padding: 8rem 8% 4rem;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at 80% 20%, rgba(0, 242, 254, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 10% 80%, rgba(79, 172, 254, 0.05) 0%, transparent 50%);
+  background: radial-gradient(circle at 80% 20%, rgba(0, 43, 73, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 10% 80%, rgba(29, 78, 216, 0.15) 0%, transparent 50%);
 }
 
 .hero-content {
@@ -118,9 +121,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-color);
-  color: var(--primary);
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid var(--border-glow);
+  color: var(--primary-light);
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.4rem 1rem;
@@ -131,9 +134,9 @@ body {
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--primary);
+  background-color: var(--primary-light);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--primary);
+  box-shadow: 0 0 8px var(--primary-light);
 }
 
 .hero h1 {
@@ -177,13 +180,13 @@ body {
 
 .btn-primary {
   background: var(--primary-gradient);
-  color: #000;
+  color: #ffffff;
   box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
 }
 
 .btn-outline {
@@ -204,7 +207,6 @@ body {
   gap: 2rem;
   padding: 3rem 8%;
   background: var(--bg-surface);
-  border-y: 1px solid var(--border-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -217,7 +219,7 @@ body {
 
 .stat-item h2 span {
   font-size: 1rem;
-  color: var(--primary);
+  color: var(--primary-light);
   margin-left: 4px;
 }
 
@@ -274,8 +276,8 @@ body {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-sm);
-  background: rgba(0, 242, 254, 0.1);
-  color: var(--primary);
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--primary-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,7 +297,7 @@ body {
 /* 6. Contact / B2B Section */
 .contact-section {
   padding: 6rem 8%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.03) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 43, 73, 0.25) 0%, transparent 70%);
 }
 
 .contact-container {
@@ -365,7 +367,7 @@ body {
   }
   
   .nav-links {
-    display: none; /* Can be expanded with a hamburger JS toggle */
+    display: none;
   }
 
   .hero {

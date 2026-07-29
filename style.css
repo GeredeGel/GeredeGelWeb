@@ -100,6 +100,119 @@ body {
   color: var(--primary);
   background: #f4f7f9;
 }
+/* Hero Esnek Yan Yana Düzeni */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Slider Çerçeve Tasarımı */
+.hero-slider-wrapper {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Slayt Parçaları ve Animasyon Geçişi */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi ezmeden kutuya sığdırır */
+}
+
+/* Resimlerin Altındaki Bilgi Yazısı */
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(17, 24, 39, 0.75);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+/* Navigasyon Noktaları (Dots) */
+.slider-dots {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #2563eb; /* Öne çıkan renginiz */
+  width: 24px; /* Aktif noktayı genişletme efekti */
+  border-radius: 5px;
+}
+
+/* Mobil Cihazlar İçin Uyumluluk (Responsive) */
+@media (max-width: 968px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .btn-group {
+    justify-content: center;
+  }
+  .hero-slider-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-slider {
+    height: 300px;
+  }
+}
 
 /* 3. Hero Section */
 .hero {

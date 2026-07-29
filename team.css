@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Gerede Gelatin - Sales Team Page Stylesheet
+   ========================================================================== */
+
+/* Hero Bölümü Düzenlemesi */
+.team-hero {
+  padding: 100px 20px 60px 20px;
+  text-align: center;
+  background: #f9fafb; /* Hafif kurumsal gri arka plan */
+}
+
+.team-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-hero h1 {
+  font-size: 2.8rem;
+  color: #111827;
+  margin: 20px 0;
+  font-weight: 800;
+}
+
+.team-hero p {
+  font-size: 1.15rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Ekip Kartları Alanı (Grid Sistemi) */
+.team-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-category h2 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+/* Satış Ekibi Kart Düzeni */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Kart Tasarımı */
+.team-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Karta Mouse ile Gelindiğinde Canlanma Efekti (Hover) */
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Fotoğraf Alanı */
+.member-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Kart İçeriği Yazı Alanları */
+.member-info {
+  padding: 24px;
+}
+
+.member-info h3 {
+  font-size: 1.3rem;
+  color: #111827;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.member-title {
+  color: #2563eb; /* Kurumsal Mavi Accent */
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.member-bio {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  height: 65px; /* Yazı boylarını eşitlemek için */
+  overflow: hidden;
+}
+
+/* E-posta İletişim Butonu */
+.member-contact {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: #f3f4f6;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.member-contact:hover {
+  background: #2563eb;
+  color: #ffffff;
+}

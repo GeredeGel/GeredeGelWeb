@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GeredeGelatin |Gelatine & Collagen</title>
+  <title>GeredeGelatin | Gelatine & Collagen</title>
   
   <!-- SEO & Meta Tags -->
   <meta name="description" content="Europe and Turkey's premier B2B supplier for premium, Halal-certified bovine gelatine and hydrolyzed collagen serving global food, pharmaceutical, and nutritional industries.">
-  <meta name="keywords" content="bovine gelatine, hydrolyzed collagen, halal gelatin supplier, Gerede gelatin, pharmaceutical gelatin, B2B gelatin Turkey, baking gelatin, fish gelatin, ">
+  <meta name="keywords" content="bovine gelatine, hydrolyzed collagen, halal gelatin supplier, Gerede gelatin, pharmaceutical gelatin, B2B gelatin Turkey, baking gelatin, fish gelatin">
   <meta name="robots" content="index, follow">
   
   <!-- Fonts -->
@@ -30,25 +30,57 @@
       <a href="#solutions">Solutions</a>
       <a href="#media">Media</a>
       <a href="#applications">Brands</a>
-      <a href="team.html">Sales Team</a>
+      <a href="sales-team.html">Sales Team</a>
       <a href="#careers">Careers</a>
       <a href="certificates.html">Certificates</a>
       <a href="#contact" class="nav-btn">Get a Quote</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Güncellendi: İki Sütunlu Yapı) -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="badge">
-        <span class="pulse-dot"></span> 100% Pure & Traceable
+    <div class="hero-container">
+      
+      <!-- Sol Sütun: Metin İçerikleri -->
+      <div class="hero-content">
+        <div class="badge">
+          <span class="pulse-dot"></span> 100% Pure & Traceable
+        </div>
+        <h1>Edible Bovine Gelatine & <span class="text-gradient">Hydrolyzed Collagen</span></h1>
+        <p><strong>Europe and Turkey's premier B2B supplier for premium, Halal-certified bovine gelatine serving global food, pharmaceutical, and nutritional industries.</strong></p>
+        <div class="btn-group">
+          <a href="#products" class="btn btn-primary">Explore Products</a>
+          <a href="#contact" class="btn btn-outline">Request Tech Specs</a>
+        </div>
       </div>
-      <h1>Edible Bovine Gelatine & <span class="text-gradient">Hydrolyzed Collagen</span></h1>
-      <p><strong>Europe and Turkey's premier B2B supplier for premium, Halal-certified bovine gelatine serving global food, pharmaceutical, and nutritional industries.</strong></p>
-      <div class="btn-group">
-        <a href="#products" class="btn btn-primary">Explore Products</a>
-        <a href="#contact" class="btn btn-outline">Request Tech Specs</a>
+
+      <!-- Sağ Sütun: Görsel Slider Alanı -->
+      <div class="hero-slider-wrapper">
+        <div class="hero-slider">
+          <!-- Görsel 1: Jelatin Üretimi / Toz -->
+          <div class="slide active">
+            <img src="https://unsplash.com" alt="Premium Bovine Gelatin Powder">
+            <span class="slide-caption">High Bloom Bovine Gelatin</span>
+          </div>
+          <!-- Görsel 2: Laboratuvar / Kalite Kontrol -->
+          <div class="slide">
+            <img src="https://unsplash.com" alt="Pharmaceutical Grade Quality Testing">
+            <span class="slide-caption">100% Traceable Lab Testing</span>
+          </div>
+          <!-- Görsel 3: Kapsül / İlaç Sektörü Uygulaması -->
+          <div class="slide">
+            <img src="https://unsplash.com" alt="Pharmaceutical Gelatin Capsules">
+            <span class="slide-caption">Global Pharma Solutions</span>
+          </div>
+        </div>
+        <!-- Slider Navigasyon Noktaları -->
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -154,6 +186,29 @@
       </form>
     </div>
   </section>
+
+  <!-- Slider Otomatik Geçiş Scripti -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Her 4 saniyede bir resmi otomatik değiştirir
+    setInterval(nextSlide, 4000);
+  </script>
 
 </body>
 </html>

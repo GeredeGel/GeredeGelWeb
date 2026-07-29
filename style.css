@@ -1,25 +1,27 @@
 /* 1. Global Variables & Dark Navy-Industrial Theme */
+/* 1. Global Variables & Light Navy-Industrial Theme */
 :root {
-  --bg-main: #060a12;
-  --bg-surface: #0f172a;
-  --bg-surface-hover: #1e293b;
+  --bg-main: #ffffff;                    /* Changed to White */
+  --bg-surface: #f8fafc;                 /* Light grey-blue for cards */
+  --bg-surface-hover: #f1f5f9;           /* Marginally darker grey-blue for hover */
   
   /* Navy & Sapphire Accents */
-  --primary: #2563eb;
-  --primary-light: #60a5fa;
-  --primary-gradient: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+  --primary: #0a31bc;                    /* Changed to your requested Blue */
+  --primary-light: #2563eb;              /* Secondary brighter blue */
+  --primary-gradient: linear-gradient(135deg, #0a31bc 0%, #3b82f6 100%);
   --navy-accent: #002b49;
-  --accent-glow: rgba(37, 99, 235, 0.3);
+  --accent-glow: rgba(10, 49, 188, 0.15); /* Softened glow for light background */
   
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-glow: rgba(59, 130, 246, 0.35);
+  --text-main: #0a31bc;                  /* Changed main text to your Blue */
+  --text-muted: #475569;                 /* Darker slate grey for secondary text readability */
+  --border-color: rgba(10, 49, 188, 0.15);/* Blue tinted border */
+  --border-glow: rgba(10, 49, 188, 0.35);
 
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
 }
+
 
 * {
   margin: 0;

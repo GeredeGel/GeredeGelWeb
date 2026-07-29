@@ -100,39 +100,70 @@ body {
   color: var(--primary);
   background: #f4f7f9;
 }
-/* Hero Esnek Yan Yana Düzeni */
+/* Hero Bölümü Ana Taşıyıcı */
+.hero {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 50px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 0 20px;
 }
 
+/* Sol Taraf: Yazıların Alanı Genişletildi */
 .hero-content {
-  flex: 1;
-  max-width: 600px;
+  flex: 1.3; /* Yazıya daha geniş alan vererek sıkışmayı önler */
+  text-align: left;
 }
 
-/* Slider Çerçeve Tasarımı */
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #111827;
+  margin: 20px 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Kalın Tanıtım Yazısı Düzenlemesi */
+.hero-bold-text {
+  font-size: 1.2rem;
+  font-weight: 700; /* Kalın font ağırlığı */
+  line-height: 1.6; /* Satır aralığı genişletildi */
+  color: #374151; /* Daha okunaklı bir koyu gri */
+  margin-bottom: 35px;
+  max-width: 90%; /* Çok sağa yayılmasını önler */
+}
+
+/* Buton Grupları */
+.btn-group {
+  display: flex;
+  gap: 15px;
+}
+
+/* Sağ Taraf: Slider Alanı Dengelendi */
 .hero-slider-wrapper {
-  flex: 1;
-  max-width: 500px;
+  flex: 0.9; /* Slider boyutunu yazıya göre biraz daha kibar tutar */
+  width: 100%;
+  max-width: 460px;
   position: relative;
 }
 
 .hero-slider {
   width: 100%;
-  height: 400px;
+  height: 380px;
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
 }
 
-/* Slayt Parçaları ve Animasyon Geçişi */
 .slide {
   position: absolute;
   top: 0;
@@ -140,36 +171,32 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  z-index: 1;
+  transition: opacity 0.6s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
-  z-index: 2;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Resmi ezmeden kutuya sığdırır */
+  object-fit: cover;
 }
 
-/* Resimlerin Altındaki Bilgi Yazısı */
 .slide-caption {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(17, 24, 39, 0.75);
+  background: rgba(17, 24, 39, 0.8);
   color: #ffffff;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 30px;
   font-size: 0.85rem;
   font-weight: 600;
   backdrop-filter: blur(4px);
 }
 
-/* Navigasyon Noktaları (Dots) */
 .slider-dots {
   position: absolute;
   bottom: -25px;
@@ -177,42 +204,44 @@ body {
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
-  z-index: 10;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #d1d5db;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  background: #e5e7eb;
+  transition: all 0.3s ease;
 }
 
 .dot.active {
-  background: #2563eb; /* Öne çıkan renginiz */
-  width: 24px; /* Aktif noktayı genişletme efekti */
-  border-radius: 5px;
+  background: #2563eb;
+  width: 20px;
+  border-radius: 4px;
 }
 
-/* Mobil Cihazlar İçin Uyumluluk (Responsive) */
+/* Mobil Ekranlar İçin Tam Uyumluluk */
 @media (max-width: 968px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
+    gap: 40px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-bold-text {
+    max-width: 100%;
+    font-size: 1.1rem;
   }
   .btn-group {
     justify-content: center;
   }
   .hero-slider-wrapper {
-    width: 100%;
     max-width: 100%;
   }
-  .hero-slider {
-    height: 300px;
-  }
 }
+
 
 /* 3. Hero Section */
 .hero {

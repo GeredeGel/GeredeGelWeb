@@ -1,18 +1,18 @@
 /* 1. Global Variables & Crisp White Theme */
 :root {
   --bg-main: #ffffff;                    /* Tam Beyaz Arka Plan */
-  --bg-surface: #f8fafc;                 /* Kartlar için hafif gri-mavi */
-  --bg-surface-hover: #f1f5f9;
+  --bg-surface: #f4f7f9;                 /* Kartlar için hafif gri-mavi */
+  --bg-surface-hover: #eaf0f4;
   
   /* Navy & Sapphire Accents */
-  --primary: #0a31bc;                    /* Sizin Mavinizi Birincil Yaptık */
-  --primary-light: #3b82f6;
-  --primary-gradient: linear-gradient(135deg, #0a31bc 0%, #1d4ed8 100%);
-  --accent-glow: rgba(10, 49, 188, 0.2);
+  --primary: #04344b;                    /* Sizin Mavinizi Birincil Yaptık */
+  --primary-light: #07567c;
+  --primary-gradient: linear-gradient(135deg, #04344b 0%, #0a5375 100%);
+  --accent-glow: rgba(4, 52, 75, 0.15);
   
   --text-main: #0f172a;                  /* Okunabilirlik için ana metin koyu lacivert/gri */
   --text-muted: #475569;                 /* İkinci derece metinler için orta gri */
-  --border-color: rgba(10, 49, 188, 0.12);
+  --border-color: rgba(4, 52, 75, 0.12);
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -44,8 +44,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 8%;
-  background: #0a31bc;                   /* Header sizin maviniz oldu */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--primary);                   /* Header sizin maviniz oldu */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -60,7 +60,7 @@ body {
 }
 
 .logo-accent {
-  color: #60a5fa;                        /* Logodaki vurgu rengi açık mavi */
+  color: #38bdf8;                        /* Logodaki vurgu rengi açık mavi */
   -webkit-text-fill-color: initial;       /* Eski gradienti temizledik */
   background: none;
 }
@@ -73,7 +73,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);      /* Menü linkleri beyazımsı */
+  color: rgba(255, 255, 255, 0.85);      /* Menü linkleri beyazımsı */
   font-weight: 500;
   font-size: 0.95rem;
   transition: color 0.2s ease;
@@ -86,19 +86,19 @@ body {
 /* Menü içindeki butonun mavi arka planda patlaması için beyaz yaptık */
 .nav-links .nav-btn {
   background: #ffffff;
-  color: #0a31bc;                        /* Buton yazısı mavi */
+  color: var(--primary);                        /* Buton yazısı mavi */
   font-weight: 700;
   padding: 0.65rem 1.4rem;
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .nav-links .nav-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-  color: #0a31bc;
-  background: #f8fafc;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+  color: var(--primary);
+  background: #f4f7f9;
 }
 
 /* 3. Hero Section */

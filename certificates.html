@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Meta Tags (Düzeltildi: Sayfa içeriğiyle uyumlu hale getirildi) -->
+  <!-- SEO & Meta Tags -->
   <title>Quality & Halal Certifications | GeredeGelatin</title>
   <meta name="description" content="Review Gerede Gelatin's international quality accreditations including International Halal Certificate, ISO 22000:2018, GMP, and HACCP compliance.">
   <meta name="keywords" content="Gerede Gelatin certificates, halal gelatin certification, ISO 22000, GMP gelatin, HACCP supplier">
   <meta name="robots" content="index, follow">
   
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts (FIXED: Corrected Google Fonts domain path) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Stylesheet (Düzeltildi: team.css kaldırıldı, certificates.css veya style.css eklendi) -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,7 +49,6 @@
 
   <!-- Certificates Grid Section -->
   <section class="cert-section">
-    <!-- Düzeltildi: CSS'te eksik olan .section-header sınıfı için HTML yapısı -->
     <div class="section-header">
       <h2>Official Standards & Accreditations</h2>
       <p>Click any document to inspect or request certified documentation for compliance verification.</p>
@@ -68,10 +67,10 @@
           <p class="issuer">Audited by World Halal Council / SMIIC Standards</p>
           <p class="cert-desc">Guarantees 100% Halal-compliant bovine raw hide sourcing, processing line separation, and enzyme-free chemical extraction.</p>
         </div>
-        <!-- Düzeltildi: .btn sınıfları yeni CSS kurallarına göre güncellendi -->
+        <!-- FIXED: Relative paths for safer host deployment -->
         <div class="cert-actions">
-          <a href="/docs/halal-preview.pdf" target="_blank" class="btn btn-outline btn-sm">Preview PDF</a>
-          <a href="/docs/halal-certificate.pdf" download class="btn btn-primary btn-sm">Download</a>
+          <a href="docs/halal-preview.pdf" target="_blank" class="btn btn-outline btn-sm">Preview PDF</a>
+          <a href="docs/halal-certificate.pdf" download class="btn btn-primary btn-sm">Download</a>
         </div>
       </div>
 
@@ -86,7 +85,7 @@
           <p class="cert-desc">Full compliance with food chain safety, hazard analysis, and operational controls from raw leather intake to final packaging.</p>
         </div>
         <div class="cert-actions">
-          <a href="/docs/iso-22000.pdf" download class="btn btn-outline btn-sm">Download PDF</a>
+          <a href="docs/iso-22000.pdf" download class="btn btn-outline btn-sm">Download PDF</a>
         </div>
       </div>
 
@@ -101,7 +100,7 @@
           <p class="cert-desc">Rigorous hygiene and automated cleanroom controls engineered to supply pharmaceutical-grade gelatine for capsules.</p>
         </div>
         <div class="cert-actions">
-          <a href="/docs/gmp-cert.pdf" download class="btn btn-outline btn-sm">Download PDF</a>
+          <a href="docs/gmp-cert.pdf" download class="btn btn-outline btn-sm">Download PDF</a>
         </div>
       </div>
 
@@ -116,7 +115,7 @@
           <p class="cert-desc">Continuous digital monitoring of critical points during filtration, concentration, sterilization, and drying cycles.</p>
         </div>
         <div class="cert-actions">
-          <a href="/docs/haccp-cert.pdf" download class="btn btn-outline btn-sm">Download PDF</a>
+          <a href="docs/haccp-cert.pdf" download class="btn btn-outline btn-sm">Download PDF</a>
         </div>
       </div>
 
@@ -156,7 +155,6 @@
         <h3>Need a Specific Batch Certificate?</h3>
         <p>If you are an existing customer requesting a Certificate of Analysis (CoA) or custom compliance document for customs clearing, please enter your batch ID below.</p>
         
-        <!-- Düzeltildi: JavaScript entegrasyonu için form yapısı hazırlandı -->
         <form class="batch-form" id="coaForm">
           <input type="text" id="batchId" placeholder="Enter Batch / Lot Number (e.g. GEL-2026-X8)" required>
           <button type="submit" class="btn btn-primary">Retrieve Document</button>
@@ -164,6 +162,16 @@
       </div>
     </div>
   </section>
+
+  <!-- FIXED: Simple JavaScript helper to prevent broken form submit crashes -->
+  <script>
+    document.getElementById('coaForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const batchId = document.getElementById('batchId').value;
+      alert('Searching database for Batch ID: ' + batchId + '\nThis logic connects to your backend API.');
+      // You will add your actual download or fetch code here later.
+    });
+  </script>
 
 </body>
 </html>
